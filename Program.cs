@@ -1,18 +1,15 @@
 ﻿string[] CreateArray(int size)
 {
-    
-    string[] array = new string[size];
+   string[] array = new string[size];
 
     for(int i = 0; i < size; i++)   
         {
             Console.Write("Введите текст для записи в элемент массива: ");
             array[i] = Console.ReadLine();
-
-        }
-
-           
+        }           
     return array;
 }
+
 
 void ShowArray(string[] array)
 {
