@@ -1,49 +1,49 @@
 ﻿string[] CreateArray(int size)
 {
-   string[] array = new string[size];
+   string[] primaryArray = new string[size];
 
     for(int i = 0; i < size; i++)   
         {
             Console.Write("Введите текст для записи в элемент массива: ");
-            array[i] = Console.ReadLine();
+            primaryArray[i] = Console.ReadLine();
         }           
-    return array;
+    return primaryArray;
 }
 
 
-void ShowArray(string[] array)
+void ShowArray(string[] primaryArray)
 {
-    for(int i = 0; i < array.Length; i++)
+    for(int i = 0; i < primaryArray.Length; i++)
     
-       Console.Write(array[i] + " ");
+       Console.Write(primaryArray[i] + " ");
     
     Console.WriteLine();	
 }
 
-string[] ArrayOfElementsWithThreeSymbols(string[] userArray)
+string[] ArrayOfElementsWithThreeSymbols(string[] primaryArray)
 {
-    string[] modifiedArray = new string[userArray.Length];
+    string[] arrayThreeSymbols = new string[primaryArray.Length];
    
-    for (int i = 0, k = 0; i < userArray.Length; i++)
+    for (int i = 0, k = 0; i < primaryArray.Length; i++)
     {
-        if(userArray[i].Length <= 3)
+        if(primaryArray[i].Length <= 3)
         {
-            modifiedArray[k] = userArray[i];
+            arrayThreeSymbols[k] = primaryArray[i];
             k++;
         }
     }
-    return modifiedArray;
+    return arrayThreeSymbols;
 }
 
 
 Console.Write("Введите число элементов массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
-string[] myArray = CreateArray(length);
+string[] userArray = CreateArray(length);
 Console.WriteLine();
 Console.Write("Ваш массив: ");
-ShowArray(myArray);
+ShowArray(userArray);
 Console.WriteLine();
-string[] arrayOfThree = ArrayOfElementsWithThreeSymbols(myArray);
+string[] arrayOfThree = ArrayOfElementsWithThreeSymbols(userArray);
 Console.Write("Элементы массива, в которых не более трёх символов: ");
 ShowArray(arrayOfThree);
 
