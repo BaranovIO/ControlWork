@@ -11,11 +11,11 @@
 }
 
 
-void ShowArray(string[] primaryArray)
+void ShowArray(string[] array)
 {
-    for(int i = 0; i < primaryArray.Length; i++)
+    for(int i = 0; i < array.Length; i++)
     
-       Console.Write(primaryArray[i] + " ");
+       Console.Write(array[i] + " ");
     
     Console.WriteLine();	
 }
@@ -46,5 +46,3 @@ Console.WriteLine();
 string[] arrayOfThree = ArrayOfElementsWithThreeSymbols(userArray);
 Console.Write("Элементы массива, в которых не более трёх символов: ");
 ShowArray(arrayOfThree);
-
-
